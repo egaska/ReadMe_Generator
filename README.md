@@ -1,15 +1,15 @@
 
-    #ReadMe Generator
+    # ReadMe Generator
     This is a program that generates a readMe for GitHub projects
 
-    ##To use
+    ## To use
     ![Screenshot](testimage.png)
     Make some readMes
 
-    ##Contributors
+    ## ontributors
     egaska
     undefined
     
-    ##License
+    ## License
     No License
     
