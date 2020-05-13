@@ -51,7 +51,7 @@ function generateMarkdown(answers) {
     ${answers.description}
 
     ##To use
-    ${answers.screenshot}
+    ![Screenshot](${answers.screenshot})
     ${answers.usage}
 
     ##Contributors
