@@ -27,6 +27,7 @@ function promptUser() {
             message: "What kind of license would you like? ",
             choices: ["MIT License", "GNU General Public License v3.0", "No License"]
         },
+
         {
             type: "input",
             name: "usage",
@@ -34,13 +35,14 @@ function promptUser() {
         },
         {
             type: "input",
-            name: "contributor",
-            message: "Add other contributors here: "
-        },
-        {
-            type: "input",
             name: "screenshot",
             message: "Add a screenshot. This can be a pathway or a link: "
+        },
+        {
+            type: 'Input',
+            name: 'collaboratorName',
+            message: 'Please enter collaborator names (Leave empty if n/a) : ',
+            default: ' '
         }
     ]);
 }
@@ -56,10 +58,10 @@ function generateMarkdown(answers) {
     ![Screenshot](${answers.screenshot})
     ${answers.usage}
 
-    ## Contributors
+    ### Authors 
     ----
     ${answers.user}
-    ${answers.contributors}
+    ${answers.collaboratorName}
     
     ## License
     ----
