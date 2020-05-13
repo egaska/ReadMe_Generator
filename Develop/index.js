@@ -12,11 +12,11 @@ function promptUser() {
             message: "What is your GitHub username? "
         },
         {
-                type: "input",
-                name: "projectName",
-                message: "What is your project's name? "
-            },
-            {
+            type: "input",
+            name: "projectName",
+            message: "What is your project's name? "
+        },
+        {
             type: "input",
             name: "description",
             message: "Please describe your project: "
@@ -35,7 +35,7 @@ function promptUser() {
         {
             type: "input",
             name: "contributor",
-            message: "Other contributors?: "
+            message: "Add other contributors here: "
         },
         {
             type: "input",
@@ -47,18 +47,22 @@ function promptUser() {
 
 function generateMarkdown(answers) {
     return `
-    #${answers.projectName}
+    # ${answers.projectName}
+    ----
     ${answers.description}
 
-    ##To use
+    ## To use
+    ----
     ![Screenshot](${answers.screenshot})
     ${answers.usage}
 
-    ##Contributors
+    ## Contributors
+    ----
     ${answers.user}
     ${answers.contributors}
     
-    ##License
+    ## License
+    ----
     ${answers.license}
     `
 }
@@ -67,7 +71,7 @@ promptUser()
     .then(function (answers) {
         const markdown = generateMarkdown(answers);
 
-        return writeFileAsync("readMe.md", markdown);
+        return writeFileAsync("README.md", markdown);
     })
     .then(function () {
         console.log("Successfully wrote to readMe.md");
@@ -75,9 +79,3 @@ promptUser()
     .catch(function (err) {
         console.log(err);
     });
-
-// function init() {
-
-// }
-
-// init();
