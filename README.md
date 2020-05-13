@@ -1,12 +1,12 @@
 
-# Unit 09 Node.js and ES6+ Homework: Good README Generator
+    # ReadMe Generator
     This is a program that generates a readMe for GitHub projects
 
     ## To use
     ![Screenshot](testimage.png)
     Make some readMes
 
-    ## Contributors
+    ## ontributors
     egaska
     undefined
     
