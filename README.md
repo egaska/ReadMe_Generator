@@ -17,7 +17,8 @@ n/a
 ## Getting Started
 ![Screenshot](/screenshot.JPG)<br /> 
 
-Run the program from the console using ``` node index.js ``` 
+After downloading the file you will need to install inquirer via ```npm init``` followed by ```npm install```<br />
+Run the program from the console using ``` node index.js ``` <br />
 User will be propted with questions to build their ReadMe file. 
     
 ## License
