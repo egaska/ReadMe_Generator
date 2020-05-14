@@ -8,9 +8,9 @@ This is a quick generator to create ReadMe files preformated for GitHub projects
 n/a
 
 ## Getting Started
-![Screenshot](/assets/screenshot.jpg) <br /> 
+![Screenshot](screenshot.jpg)<br /> 
 
-Run the program from the console using ``` node index.js ```  <br />  User will be propted with questions to build their ReadMe file. 
+Run the program from the console using ``` node index.js ```  <br />User will be propted with questions to build their ReadMe file. 
     
 ## License
  
