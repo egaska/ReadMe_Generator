@@ -22,10 +22,10 @@ function promptUser() {
             message: "Please describe your project: "
         },
         {
-            type: "checkbox",
+            type: "input",
             name: "license",
-            message: "What kind of license would you like? ",
-            choices: ["MIT License", "GNU General Public License v3.0", "No License"]
+            message: "What type of Licence would you like?: ",
+            default: ' '
         },
 
         {
@@ -36,7 +36,8 @@ function promptUser() {
         {
             type: "input",
             name: "screenshot",
-            message: "Add a screenshot. This can be a pathway or a link: "
+            message: "Add a screenshot. This can be a pathway or a link: ",
+            default: ' '
         },
         {
             type: 'Input',
@@ -48,24 +49,22 @@ function promptUser() {
 }
 
 function generateMarkdown(answers) {
-    return `
-    # ${answers.projectName}
-    ----
-    ${answers.description}
+    return `    
+# ${answers.projectName}git a
+${answers.description}
 
-    ## To use
-    ----
-    ![Screenshot](${answers.screenshot})
-    ${answers.usage}
-
-    ### Authors 
-    ----
-    ${answers.user}
-    ${answers.collaboratorName}
+## To use
+![Screenshot](${answers.screenshot})\n
+${answers.usage}
     
-    ## License
-    ----
-    ${answers.license}
+## License
+
+${answers.license}
+
+### Authors 
+----
+${answers.user}
+${answers.collaboratorName}
     `
 }
 
