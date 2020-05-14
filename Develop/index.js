@@ -63,21 +63,20 @@ function generateMarkdown(answers) {
     return `    
 # ${answers.projectName}
 ## Description
-![maintained badge](https://img.shields.io/badge/Maintained%3F-${answers.maintained}-blue)
+![maintained badge](https://img.shields.io/badge/Maintained%3F-${answers.maintained}-blue)  <br /> 
 ${answers.description}
 
 ## Deployed URL
 ${answers.deployURL}
 
 ## Getting Started
-![Screenshot](${answers.screenshot})\n
+![Screenshot](${answers.screenshot}) <br /> 
 ${answers.usage}
     
 ## License
 ${answers.license}
 
 ### Authors 
-----
 ${answers.user}
 ${answers.collaboratorName}
 `
