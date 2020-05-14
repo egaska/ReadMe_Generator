@@ -27,7 +27,6 @@ function promptUser() {
             message: "What type of Licence would you like?: ",
             default: ' '
         },
-
         {
             type: "input",
             name: "usage",
@@ -44,28 +43,44 @@ function promptUser() {
             name: 'collaboratorName',
             message: 'Please enter collaborator names (Leave empty if n/a) : ',
             default: ' '
+        },
+        {
+            type: 'Input',
+            name: 'deployURL',
+            message: 'What is the deployed URL?: ',
+            default: ' '
+        },
+        {
+            type: 'confirm',
+            name: 'maintained',
+            message: 'Is this repo maintained?: ',
+            default: 'Y'
         }
     ]);
 }
 
 function generateMarkdown(answers) {
     return `    
-# ${answers.projectName}git a
+# ${answers.projectName}
+## Description
+![maintained badge](https://img.shields.io/badge/Maintained%3F-${answers.maintained}-blue)
 ${answers.description}
 
-## To use
+## Deployed URL
+${answers.deployURL}
+
+## Getting Started
 ![Screenshot](${answers.screenshot})\n
 ${answers.usage}
     
 ## License
-
 ${answers.license}
 
 ### Authors 
 ----
 ${answers.user}
 ${answers.collaboratorName}
-    `
+`
 }
 
 promptUser()
