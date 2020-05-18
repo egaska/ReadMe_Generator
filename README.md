@@ -15,7 +15,7 @@ This is a quick generator to create ReadMe files preformated for GitHub projects
 n/a
 
 ## Getting Started
-![Screenshot](/screenshot.JPG)<br /> 
+![Screenshot](/screenshot.webm)<br /> 
 
 After downloading the file you will need to install inquirer via ```npm init``` followed by ```npm install```<br />
 Run the program from the console using ``` node index.js ``` <br />
